@@ -3,12 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Bundled Page</title>
-  <script>
-  setTimeout(function() {
-    window.location.href = 'https://www.lam-eng.com';
-  }, 15000);
-</script>
-  <style>
+   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: #faf9f5; display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
     #__bundler_loading { position: fixed; bottom: 20px; right: 20px; font: 13px/1.4 -apple-system, BlinkMacSystemFont, sans-serif; color: #666; background: #fff; padding: 8px 14px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.12); z-index: 10000; }
@@ -162,6 +157,9 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
     // Babel standalone auto-transforms type=text/babel on DOMContentLoaded,
     // which fired before we swapped the document. Trigger manually if present.
+    setTimeout(function() {
+    window.location.href = 'https://www.lam-eng.com';
+  }, 15000);
     if (window.Babel && typeof window.Babel.transformScriptTags === 'function') {
       window.Babel.transformScriptTags();
     }
