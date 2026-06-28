@@ -157,10 +157,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
     // Babel standalone auto-transforms type=text/babel on DOMContentLoaded,
     // which fired before we swapped the document. Trigger manually if present.
-    setTimeout(function() {
-    window.location.href = 'https://www.lam-eng.com';
-  }, 10000);
-    if (window.Babel && typeof window.Babel.transformScriptTags === 'function') {
+        if (window.Babel && typeof window.Babel.transformScriptTags === 'function') {
       window.Babel.transformScriptTags();
     }
   } catch (err) {
